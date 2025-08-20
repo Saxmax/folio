@@ -1,0 +1,28 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: "Google Sans Code", monospace;
+  --font-title: "Roboto Flex", sans-serif;
+
+  /* Custom Palettes */
+  /* Earthy Tones palette @https://coolors.co/palette/a3a380-d6ce93-efebce-d8a48f-bb8588 */
+  --color-earth-green: #A3A380;
+  --color-earth-yellow: #D6CE93;
+  --color-earth-beige: #EFEBCE;
+  --color-earth-pink: #D8A48F;
+  --color-earth-purple: #BB8588;
+
+  /* Deep Sea palette @https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd */
+  --color-sea-darkest: #0D1B2A;
+  --color-sea-dark: #1B263B;
+  --color-sea-medium: #415A77;
+  --color-sea-light: #778DA9;
+  --color-sea-lightest: #E0E1DD;
+
+  --color-sea-header-bg: var(--color-sea-dark);
+  --color-sea-body-bg: var(--color-sea-light);
+  --color-sea-sections-bg: var(--color-sea-lightest);
+}

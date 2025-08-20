@@ -27,3 +27,17 @@ function hideAllProjects() {
 
 // Set year dynamically (at bottom, by copyright notice)
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const sections = {
+  about: "section-about",
+  projects: "section-projects",
+  contact: "section-contact",
+};
+
+for (const section of Object.keys(sections)) {
+  fetch(`sections/${section}.html`)
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById(`section-${section}`).innerHTML = html;
+    });
+}
