@@ -1,0 +1,22 @@
+{
+  "name": "folio",
+  "version": "0.0.4",
+  "main": "main.js",
+  "scripts": {
+    "delete-dist": "if exist dist rmdir /s /q dist",
+    "create-dist": "if not exist dist mkdir dist",
+    "copy-src": "robocopy src dist /E /XF main.css || echo copied",
+    "generate-css": "tailwindcss -i ./src/main.css -o ./dist/style.css --minify",
+    "build": "npm run delete-dist && npm run create-dist && npm run copy-src && npm run generate-css"
+  },
+  "keywords": [],
+  "author": "Max Huber",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}
