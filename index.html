@@ -16,25 +16,6 @@
 
   <!-- Tailwind CSS (CDN version) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Dark Mode Toggle Button -->
-  <!-- <script>
-    function toggleDark() {
-      const toggle = document.getElementById('dark-toggle');
-      const html = document.documentElement;
-      const dot = toggle.querySelector('.dot');
-
-      // Initialize position if dark mode is active
-      if(html.classList.contains('dark')){
-        dot.classList.add('translate-x-6');
-      }
-
-      toggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        dot.classList.toggle('translate-x-6');
-      });
-    }
-  </script> -->
 </head>
 <body class="bg-gray-100 text-gray-900">
   <!-- HEADER -->
@@ -82,26 +63,17 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
         <!-- Project Card -->
         <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow cursor-pointer hover:shadow-lg transition"
-            onclick="openModal('project1')">
+            onclick="showProject(0)">
           <h3 class="text-xl font-bold mb-2">Project 1</h3>
           <p class="text-gray-700 dark:text-gray-300">Short description of project.</p>
         </div>
-        <!-- <a href="project1.html" class="block p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">Project One</h3>
-          <p class="text-gray-600">A short description of this project...</p>
-        </a>
-
-        <a href="project2.html" class="block p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-bold mb-2">Project Two</h3>
-          <p class="text-gray-600">A short description of this project...</p>
-        </a> -->
       </div>
     </section>
 
     <!-- Modal -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div name="project" id="0" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
       <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 max-w-2xl w-full relative">
-        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100">
+        <button onclick="hideProject(0)" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100">
           ✕
         </button>
         <h3 class="text-2xl font-bold mb-4">Project Title</h3>
@@ -113,24 +85,6 @@
         </p>
       </div>
     </div>
-
-    <script>
-      const modal = document.getElementById('modal');
-
-      function openModal(projectId) {
-        // You can dynamically fill content based on projectId here
-        modal.classList.remove('hidden');
-      }
-
-      function closeModal() {
-        modal.classList.add('hidden');
-      }
-
-      // Close modal on clicking outside content
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-    </script>
 
     <!-- Contact Section -->
     <section class="bg-blue-50 p-8 rounded-2xl shadow-inner">
@@ -220,14 +174,9 @@
   <!-- FOOTER -->
   <footer class="bg-gray-200 p-6 mt-12">
     <div class="max-w-5xl mx-auto text-center">
-      <!-- <a href="contact.html" class="text-blue-600 hover:underline">Contact Me</a> -->
       <p class="text-gray-600 mt-2">&copy; <span id="year"></span> Max Huber</p>
     </div>
   </footer>
-
-  <!-- Small script for dynamic year -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
