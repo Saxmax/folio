@@ -15,32 +15,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-sea-body-bg text-gray-900">
-  <header class="bg-sea-header-bg shadow">
-    <div class="max-w-5xl mx-auto flex items-center justify-between p-8">
+<body class="body-definition">
+  <header class="header-definition">
+    <div class="header-container">
       <!-- Left: Name & Subtitle -->
       <div>
-        <h1 class="text-3xl font-title font-semibold text-sea-lightest">Max Huber</h1>
-        <p class="text-sea-light">Frontend Developer • Problem Solver • Coffee Enthusiast</p>
+        <h1 class="header-name">Max Huber</h1>
+        <p class="header-name-text">Frontend Developer • Problem Solver • Coffee Enthusiast</p>
       </div>
 
       <!-- Right: Dark Mode Toggle -->
-      <button id="dark-toggle" class="relative inline-flex items-center h-6 w-12 rounded-full bg-gray-300 transition-colors focus:outline-none">
-        <!-- Circle -->
-        <span class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full shadow-md transition-transform"></span>
+      <button id="dark-toggle" class="header-darkmode-button">
+        <span class="header-darkmode-dot"></span>
       </button>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto p-6">
+  <main class="main-definition">
     <div id="section-about"></div>
     <div id="section-projects"></div>
     <div id="section-contact"></div>
   </main>
 
-  <footer class="bg-gray-200 p-6 mt-12">
-    <div class="max-w-5xl mx-auto text-center">
-      <p class="text-gray-600 mt-2">&copy; <span id="year"></span> Max Huber</p>
+  <footer class="footer-definition">
+    <div class="footer-container">
+      <p class="footer-text">&copy; <span id="year"></span> Max Huber</p>
     </div>
   </footer>
   <script src="main.js"></script>
