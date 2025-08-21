@@ -6,14 +6,6 @@
   --font-sans: "Google Sans Code", monospace;
   --font-title: "Roboto Flex", sans-serif;
 
-  /* Custom Palettes */
-  /* Earthy Tones palette @https://coolors.co/palette/a3a380-d6ce93-efebce-d8a48f-bb8588 */
-  --color-earth-green: #A3A380;
-  --color-earth-yellow: #D6CE93;
-  --color-earth-beige: #EFEBCE;
-  --color-earth-pink: #D8A48F;
-  --color-earth-purple: #BB8588;
-
   /* Deep Sea palette @https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd */
   --color-sea-darkest: #0D1B2A;
   --color-sea-dark: #1B263B;
@@ -100,16 +92,20 @@
   @apply text-2xl font-title font-semibold mb-4;
 }
 
+.project-summary {
+  @apply text-gray-700 mb-4;
+}
+
 .project-grid {
   @apply grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto;
 }
 
 .project-cell {
-  @apply bg-gray-800 p-6 rounded-lg shadow cursor-pointer hover:shadow-lg transition;
+  @apply bg-sea-dark p-6 rounded-lg shadow cursor-pointer hover:shadow-lg transition;
 }
 
 .project-title {
-  @apply text-xl text-gray-500 font-bold mb-2;
+  @apply text-xl text-gray-400 font-bold mb-2;
 }
 
 .project-description {
@@ -122,15 +118,15 @@
 }
 
 .modal-container {
-  @apply bg-gray-800 rounded-xl shadow-lg w-6xl max-h-[80vh] top-4 relative flex flex-col;
+  @apply bg-sea-dark rounded-xl shadow-lg w-6xl max-h-[80vh] top-4 relative flex flex-col;
 }
 
 .modal-header {
-  @apply flex items-center rounded-xl justify-between p-6 border-b sticky bg-gray-800 z-10;
+  @apply bg-sea-darkest flex items-center rounded-xl justify-between p-6 sticky z-10;
 }
 
 .modal-button {
-  @apply text-gray-500 hover:text-gray-100;
+  @apply text-gray-400 hover:text-gray-100;
 }
 
 .modal-body {
@@ -138,7 +134,7 @@
 }
 
 .modal-title {
-  @apply text-2xl font-title font-bold;
+  @apply text-gray-400 text-2xl font-title font-bold;
 }
 
 .modal-paragraph {
