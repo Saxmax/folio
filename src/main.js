@@ -1,26 +1,37 @@
 // Set year dynamically (at bottom, by copyright notice)
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const sections = {
-  about: "section-about",
-  projects: "section-projects",
-  contact: "section-contact",
-};
-
 let projects = [];
 
-function fetchPages() {
-  const sectionKeys = Object.keys(sections);
-  for (const section of sectionKeys) {
-    fetch(`sections/${section}.html`)
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById(`section-${section}`).innerHTML = html;
+const sections = ["about", "projects", "contact"];
+const modals = [
+  "anticheat",
+  "dooh",
+  "framework",
+  "godot",
+  "multiplayer",
+  "unity",
+];
 
-      if(section == sectionKeys[sectionKeys.length - 1]) {
-        loadProjects();
-      }
-    });
+function fetchContent() {
+  for (const section of sections) {
+    fetch(`sections/${section}.html`)
+      .then((response) => response.text())
+      .then((html) => {
+        document.getElementById(`section-${section}`).innerHTML = html;
+      });
+  }
+
+  for (const modal of modals) {
+    fetch(`projects/${modal}.html`)
+      .then((response) => response.text())
+      .then((html) => {
+        document.body.innerHTML += html;
+
+        if (modal == modals[modals.length - 1]) {
+          setTimeout(() => loadProjects(), 50);
+        }
+      });
   }
 }
 
@@ -37,6 +48,7 @@ function showProject(cardId) {
   projects.forEach((project) => {
     if (project.id == cardId) {
       project.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden"); // lock background
     }
   });
 }
@@ -45,6 +57,7 @@ function hideProject(cardId) {
   projects.forEach((project) => {
     if (project.id == cardId) {
       project.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden"); // unlock background
     }
   });
 }
@@ -53,4 +66,11 @@ function hideAllProjects() {
   projects.forEach((project) => project.classList.add("hidden"));
 }
 
-fetchPages();
+fetchContent();
+
+function test(a, b, c, d) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log(d);
+}
