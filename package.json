@@ -8,8 +8,7 @@
     "copy-src": "robocopy src dist /E /XF style.css || echo copied",
     "generate-css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
     "build": "npm run delete-dist && npm run create-dist && npm run copy-src && npm run generate-css",
-    "serve": "npx serve",
-    "reload": "npm run build && npx serve"
+    "serve": "npm run build && npx serve"
   },
   "keywords": [],
   "author": "Max Huber",
