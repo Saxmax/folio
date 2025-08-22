@@ -6,12 +6,55 @@
 <div name="project" id="0" class="modal-overlay hidden flex">
   <div class="modal-container">
     <div class="modal-header">
-      <h3 class="modal-title">Framework</h3>
+      <h3 class="modal-title">The Flarie Framework</h3>
       <button onclick="hideProject(0)" class="modal-button">✕</button>
     </div>
     <div class="modal-body">
       <p class="modal-paragraph">
-        Lorem ipsum dolor.
+        The Framework is a shared file every game uses.
+        It serves the purpose of letting the game developers focus on the game idea
+        and not have to spend time writing/copying/modifying the same functions over again.
+        It has grown to be a huge project that supports multiple game modes on multiple platforms
+        for every different type of game conceivable in the Flarie library.
+      </p>
+      <p class="modal-paragraph">
+        The Framework also holds the UI that all games display, which consists of:
+        * The scorebar:
+          This holds the current score, any lives, stars, moves remaining, and a colored visual timer.
+        * The coins display:
+          Simply tells the users how many coins they have accrued so far in the game round.
+          It may also serve as a filled container for sessions that have a target score to reach.
+        * The pause button & view:
+          A simple button that opens up a screen-covering interface while pausing the game.
+          The pause view shows the tutorial text and lets the user exit the game or resume.
+        * Preview page:
+          Before the game begins we display the latest score achieved and the PLAY button to begin the game.
+        * And more..
+          Depending on the game, game mode, and platform, the framework UI would adapt.
+      </p>
+      <img src="images/scorebars.png" class="modal-image max-w-lg" onclick="this.classList.toggle('max-w-lg'); this.classList.toggle('max-w-full');"/>
+      <p class="modal-image-description">Different versions of the scorebar</p>
+      <p class="modal-paragraph">
+        When I first joined Flarie they had about 50 games in their app and I noticed that each game had some identical functions in them.
+        I set about creating a new file, the 'Framework', that would hold all of these shared functions.
+        At first this was just a global script dumping functions in to the DOM,
+        but during a later rewrite it became a class object.
+      </p>
+      <p class="modal-paragraph">
+        What began as a bare-bones collection of necessary functions for each game
+        eventually grew to alleviate other common trends I noticed in the game code.
+        Say some of the games had pickups in them where the developer wanted a particle emitter effect,
+        well then the framework would have a function that simplified this process to a single function call
+        with parameters to modify common settings.
+        Always returning the object to allow for chaining or further modification.
+      </p>
+      <img src="images/gamescreens.png" class="modal-image max-w-lg" onclick="this.classList.toggle('max-w-lg'); this.classList.toggle('max-w-full');"/>
+      <p class="modal-image-description">Preview Page | Game View | Adventure Level View</p>
+      <p class="modal-paragraph">
+        Looking back it is clear to me how the Framework grew and matured while I myself grew as a developer.
+        When I learned new things I would use them in the Framework to make it more efficient and helpful.
+        I distinctly remember the day I changed all the multi-parameter functions to instead use just one parameter object
+        where the developer could provide only the properties they wanted to.
       </p>
     </div>
   </div>
