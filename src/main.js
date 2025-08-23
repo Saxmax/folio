@@ -3,7 +3,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 let projects = [];
 
-const sections = ["about", "projects", "contact"];
+const sections = ["about", "tech", "projects", "contact"];
 const modals = [
   "anticheat",
   "dooh",

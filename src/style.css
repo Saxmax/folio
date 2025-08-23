@@ -79,7 +79,20 @@
   @apply text-gray-700 leading-relaxed whitespace-pre-line font-sans;
 }
 
-.about-list {
+/* Tech classes */
+.tech-section {
+  @apply mb-12 bg-sea-sections-bg p-8 rounded-2xl shadow-inner;
+}
+
+.tech-header {
+  @apply text-2xl font-title font-semibold;
+}
+
+.tech-paragraph {
+  @apply text-gray-700 leading-relaxed whitespace-pre-line font-sans;
+}
+
+.tech-list {
   @apply list-disc list-inside ml-2 text-gray-700 leading-relaxed font-sans;
 }
 

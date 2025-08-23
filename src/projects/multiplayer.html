@@ -1,17 +1,57 @@
 <!-- 
  Write about:
  backend, frontend, framework, networking, sockets, game design
+ TODO:
+ images of gameplay, comparing snake.io with game
+ images of first iteration: bumper
 -->
 
 <div name="project" id="1" class="modal-overlay hidden flex">
   <div class="modal-container">
     <div class="modal-header">
-      <h3 class="modal-title">Multiplayer</h3>
+      <h3 class="modal-title">The Multiplayer Project @ Flarie</h3>
       <button onclick="hideProject(1)" class="modal-button">✕</button>
     </div>
     <div class="modal-body">
       <p class="modal-paragraph">
-        Lorem ipsum dolor.
+        I was asked to develop a prototype, and eventually a finished product,
+        that would allow us to develop games for a real-time multiplayer experience at Flarie.
+        The Flarie games are hypercasual so the multiplayer experience needs to not only adhere to that
+        but also to allow users jumping in and out of the game at any point.
+        We used Phaser 2D as a game engine which is pure code, no editor, and comes with no plugins or pre-made
+        libraries for networking.
+      </p>
+      <p class="modal-paragraph">
+        I iterated many prototypes using multiple different socket api's and system designs
+        over a project that spanned two years.
+        I was not making ONE multiplayer game, in an editor that came with plugins
+        or tools to accomplish this. I was making a multiplayer service that would allow
+        our game developers to focus on making games without worrying about networking and the backend.
+      </p>
+      <p class="modal-paragraph">
+        The project ended up using Node.js to run PM2 on the backend - which could boot up multiple instances of node on one CPU -
+        with a custom backend system written in JavaScript to handle game instances, lobbys, player id's & connections, player parties (groups), invite codes,
+        and much more.
+        I also developed a multiplayer framework that would handle the networking part of the game and common features games would need.
+      </p>
+      <p class="modal-paragraph">
+        Alongside all the backend work I needed to build a game as well,
+        which requires not only gameplay but client-prediction, input lag compensation, server authority, and more.
+        The game I created was heavily inspired by the popular online mobile game Snake.io.
+        This was a simple enough game that allowed jumping in and out freely, and was proven to work since it was already trending on the app stores.
+      </p>
+      <p class="modal-paragraph">
+        The game ended up never launching and the live beta did not get much attention from our user base nor clients.
+        After months of optimizations and refactors, the servers our DevOps provided were not capable of handling real-time game connections.
+        And since there was not much demand for it from players and customers it was hard to motivate the costs of upgrading the servers.
+      </p>
+      <p class="modal-paragraph">
+        I learned so very much from this project.
+        I had to manage my time, create tickets and plan sprints, set goals and playtests sessions,
+        and also research a lot since I have never worked with networking before.
+        There were many struggles along the way - I almost got burned out from putting too much pressure on myself over time.
+        Keep in mind that I had no clue of what I was doing, and I was developing this by myself. No team, no lead, no senior guidance.
+        In retrospect, this project is what made me break out of impostor syndrome and confidently feel that I now deserve the Senior title.
       </p>
     </div>
   </div>

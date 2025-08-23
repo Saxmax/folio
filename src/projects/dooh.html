@@ -1,6 +1,8 @@
 <!-- 
  Write about:
  technology and cms
+ todo:
+ image of b&j campaign
 -->
 
 <div name="project" id="2" class="modal-overlay hidden flex">
@@ -11,7 +13,25 @@
     </div>
     <div class="modal-body">
       <p class="modal-paragraph">
-        Lorem ipsum dolor.
+        While I was working at Flarie our CTO approached me with a new project idea.
+        It was simple: Take one of our existing games and make it playable on outdoors advertising screens.
+        The idea was that passer-by's would see the ad and scan a QR code with their phone
+        to be able to play the game on the actual advertising screen - but with their phone as a controller.
+      </p>
+      <p class="modal-paragraph">
+        Many of these advertising screens have a 5G connection nowadays,
+        but we had to figure out how to communicate with it in a sticky session.
+        The result was a QR code that would generate a token for the user that opened the webpage,
+        send this to the screen that would then initiate a connection with the user's device,
+        and finally run an instance of the game.
+        The webpage on the user's device simply displayed one or more buttons that would be sent as commands
+        to the game running on the screen.
+      </p>
+      <p class="modal-paragraph">
+        I ended up building a modular system that allowed us to easily add more of our games to the list of
+        screen-playable games with only minimal configuration for the campaign.
+        But alas there was a very noticable input delay that made the games feel very unfair for the player.
+        We ended up only doing a few of these campaigns, but in the end it is one of the coolest project I have been a part of!
       </p>
     </div>
   </div>
