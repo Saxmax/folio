@@ -79,21 +79,41 @@
   @apply text-gray-700 leading-relaxed whitespace-pre-line font-sans;
 }
 
-/* Tech classes */
-.tech-section {
+.about-list {
+  @apply list-disc list-inside ml-2 text-gray-800 leading-relaxed font-sans;
+}
+
+.about-list-keyword {
+  @apply font-semibold;
+}
+
+/* Skills classes */
+.skills-section {
   @apply mb-12 bg-sea-sections-bg p-8 rounded-2xl shadow-inner;
 }
 
-.tech-header {
-  @apply text-2xl font-title font-semibold;
+.skills-header {
+  @apply text-2xl font-title font-semibold mb-4;
 }
 
-.tech-paragraph {
-  @apply text-gray-700 leading-relaxed whitespace-pre-line font-sans;
+.skills-paragraph {
+  @apply text-gray-900 leading-relaxed whitespace-pre-line font-sans;
 }
 
-.tech-list {
+.skills-list {
   @apply list-disc list-inside ml-2 text-gray-700 leading-relaxed font-sans;
+}
+
+.skills-subheader {
+  @apply font-bold;
+}
+
+.skills-bullet-header {
+  @apply font-semibold;
+}
+
+.skills-inline {
+  @apply text-gray-600;
 }
 
 /* Project classes */

@@ -1,5 +1,6 @@
-Add freeform thing for contact form
-remove style for tech, since it is only an image now??
 finish writing base text project pages
 add remaining images
 polish project page texts
+contact form text margins
+colors of svg icons should match palette
+tech stack list in project modals
