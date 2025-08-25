@@ -2,5 +2,4 @@ finish writing base text project pages
 add remaining images
 polish project page texts
 contact form text margins
-colors of svg icons should match palette
 tech stack list in project modals
