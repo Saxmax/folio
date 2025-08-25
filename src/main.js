@@ -4,14 +4,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 let projects = [];
 
 const sections = ["about", "skills", "projects", "contact"];
-const modals = [
-  "anticheat",
-  "dooh",
-  "framework",
-  "godot",
-  "multiplayer",
-  "unity",
-];
+const modals = ["anticheat", "dooh", "framework", "multiplayer", "engines"];
 
 function fetchContent() {
   for (const section of sections) {

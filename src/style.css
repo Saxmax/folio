@@ -194,6 +194,18 @@
   @apply text-gray-300 mb-4 whitespace-pre-line;
 }
 
+.modal-list {
+  @apply list-[square] list-inside ml-4 text-gray-300 leading-relaxed font-sans;
+}
+
+.modal-list-title {
+  @apply font-bold text-gray-200;
+}
+
+.modal-list-keyword {
+  @apply font-semibold text-gray-200;
+}
+
 .modal-image {
   @apply mx-auto cursor-pointer hover:opacity-80 transition-all duration-300 ease-in-out;
 }
@@ -204,6 +216,14 @@
 
 .modal-image-description-link {
   @apply text-sea-lightest hover:text-sea-medium font-semibold;
+}
+
+.modal-video {
+  @apply relative w-full overflow-hidden rounded-xl shadow-lg;
+}
+
+.modal-video-iframe {
+  @apply absolute top-0 left-0 w-full h-full;
 }
 
 /* .modal-subheader {

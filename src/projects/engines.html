@@ -1,0 +1,57 @@
+<!-- 
+ Write about:
+ bounce ball, gold greed, metronome, jett
+-->
+
+<div name="project" id="4" class="modal-overlay hidden flex">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 class="modal-title">Game Engines</h3>
+      <button onclick="hideProject(4)" class="modal-button">✕</button>
+    </div>
+    <div class="modal-techstack">
+      <span class="modal-techstack-title">Tech:</span> Unity (C#), Godot (gdscript), Phaser (JavaScript & TypeScript), CodeSkulptor (Python)
+    </div>
+    <div class="modal-body">
+      <p class="modal-paragraph">
+        I have dabbled in a few engines over the years with most time spent in Unity by a wide margin.
+        Lately I have come to appreciate not only the simplicity of Godot but also the coziness of gdscript.
+        I have made many prototypes but have yet to release any hobby-project game.
+        Unity (and thus C#) was what the University I attended taught in.
+      </p>
+      <p class="modal-paragraph">
+        For a few years I worked on some projects with two 3D artist friends of mine.
+        We worked on a multiplayer party game that combined baseball mechanics in a competitive arena knock-em-out, called Bounce Ball.
+        After that prototype we attempted a co-op top-down Zelda-esque game with dungeons and an overworld, called Gold Greed,
+        where the gimmick was that you could carry each other - adding verticality to the puzzles and traversal.
+        We worked on more game ideas and the common theme in all of them was the local multiplayer feature.
+        I was the only programmer on those projects and spent a lot of time working on things like:</p>
+      <ul class="modal-list">
+        <li><span class="modal-list-title">Character Controllers:</span>
+          Some games had controllers that were <span class="modal-list-keyword">physics</span> driven, some using <span class="modal-list-keyword">Unity CharacterController</span> class, some custom using arcade-style controls</li>
+        <li><span class="modal-list-title">GamePad Input:</span>
+          Allowing multiple gamepad types and also mouse+keyboard support, mostly using <span class="modal-list-keyword">custom written wrappers/middleware</span> to handle buttons and joysticks,
+          until Unity released their vastly improved <span class="modal-list-keyword">InputPackage</span> feature</li>
+        <li><span class="modal-list-title">Menus:</span>
+          Coding and setting up everything from simple grid-button menus to more designed menus, all navigatable and controllable with both gamepads and mouse+keyboard</li>
+        <li><span class="modal-list-title">Animation Controllers:</span>
+          Since the character controllers generally were in direct contact with the animation controllers I was the one putting them together.
+          Bounce Ball had the most advanced of animation controllers I have worked on, using <span class="modal-list-keyword">layers</span> and custom animations for all cardinal directions and abilities, etc</li>
+        <li><span class="modal-list-title">Gameplay Mechanics:</span>
+          A 2D-limited <span class="modal-list-keyword">physics driven</span> ball in a 3D game, Event systems, Environment Interactables, 2D <span class="modal-list-keyword">ship controls</span>, 2D <span class="modal-list-keyword">jetpack controls</span>, and more</li>
+        <li><span class="modal-list-title">Developer Features:</span>
+          An FPS counter, a <span class="modal-list-keyword">time manipulation</span> tool, editor tools to allow non-coders to create content (e.g weapons as a <span class="modal-list-keyword">ScriptableObject</span>)</li>
+      </ul>
+      <!-- INSERT GIFS OF GAMES -->
+      <p class="modal-paragraph">
+        I also made a simple metronome in Unity using a 3rd party plugin that would allow for more accurate timers.
+        This was a personal project for a friend that could not afford a hardware metronome and also wanted more features,
+        like custom sounds, custom time signatures, and BPM with option to tap it.
+      </p>
+      <!-- INSERT IMAGE OF METRONOME -->
+      <p class="modal-paragraph">
+        //
+      </p>
+    </div>
+  </div>
+</div>
