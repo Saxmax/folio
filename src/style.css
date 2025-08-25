@@ -88,7 +88,7 @@
 }
 
 .about-list {
-  @apply list-disc list-inside ml-2 text-gray-800 leading-relaxed font-sans;
+  @apply list-[square] list-inside ml-2 text-gray-800 leading-relaxed font-sans;
 }
 
 .about-list-keyword {
@@ -109,7 +109,7 @@
 }
 
 .skills-list {
-  @apply list-disc list-inside ml-2 text-gray-700 leading-relaxed font-sans;
+  @apply list-[square] list-inside ml-2 text-gray-700 leading-relaxed font-sans;
 }
 
 .skills-list-keyword {
