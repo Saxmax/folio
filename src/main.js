@@ -66,11 +66,25 @@ function hideAllProjects() {
   projects.forEach((project) => project.classList.add("hidden"));
 }
 
-fetchContent();
+function toggleImage(img) {
+  img.classList.add("opacity-0");
 
-function test(a, b, c, d) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-  console.log(d);
+  setTimeout(() => {
+    const isLarge = img.dataset.state === "full";
+    if (!isLarge) {
+      img.dataset.state = "full";
+      img.src = img.dataset.full;
+      img.classList.remove("max-w-lg", "cursor-zoom-in");
+      img.classList.add("max-w-full", "cursor-zoom-out");
+    } else {
+      img.dataset.state = "small";
+      img.src = img.dataset.small;
+      img.classList.remove("max-w-full", "cursor-zoom-out");
+      img.classList.add("max-w-lg", "cursor-zoom-in");
+    }
+
+    img.classList.remove("opacity-0");
+  }, 150);
 }
+
+fetchContent();
