@@ -1,5 +1,4 @@
 finish writing base text project pages
 add remaining images
 polish project page texts
-contact form text margins
 tech stack list in project modals
