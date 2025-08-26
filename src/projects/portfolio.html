@@ -1,15 +1,37 @@
-<div name="project" id="3" class="modal-overlay hidden flex">
+<div name="project" id="5" class="modal-overlay hidden flex">
   <div class="modal-container">
     <div class="modal-header">
       <h3 class="modal-title">Portfolio</h3>
-      <button onclick="hideProject(3)" class="modal-button">✕</button>
+      <button onclick="hideProject(5)" class="modal-button">✕</button>
     </div>
     <div class="modal-techstack">
       <span class="modal-techstack-title">Tech:</span> Node.js, TailwindCSS, HTML, JavaScript
     </div>
     <div class="modal-body">
       <p class="modal-paragraph">
-        Lorem ipsum dolor.
+        Since I got my first, and only, job as a developer via contacts right after University
+        I have not had a portfolio previously.
+        Even though I have set up many WordPress sites before I wanted to try creating a simple
+        portfolio page myself.
+      </p>
+      <p class="modal-paragraph">
+        I decided to create a static webpage with a simple design.
+        After some googling I found that TailwindCSS seemed easy to work with,
+        and I also found Coolors.com that helped with picking a palette to use.
+      </p>
+      <p class="modal-paragraph">
+        I use a bit of JavaScript to fetch pages on page load - this lets me keep the index file short and clean,
+        and I can focus on the other pages in separate files.
+        The same is true for the project cards, too. They each have their own html file.
+        I found this to be a nice structure with intuitive separation.
+        I also use JavaScript to toggle the clickable images in the project pages.
+      </p>
+      <p class="modal-paragraph">
+        Since some pages were fetched by JavaScript I turned the project in to a Node.js project.
+        This lets me host the page locally using npm package serve during development,
+        and I could install Tailwind as a package instead of loading it via CDN.
+        It also lets me build the project, which is actually only required for Tailwind to build a file with
+        only the used CSS properties and my custom CSS properties.
       </p>
     </div>
   </div>
