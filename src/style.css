@@ -231,7 +231,7 @@
 }
 
 .modal-video {
-  @apply relative w-full overflow-hidden rounded-xl shadow-lg;
+  @apply relative w-full overflow-hidden rounded-xl shadow-lg mx-auto;
 }
 
 .modal-video-iframe {
