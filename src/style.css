@@ -210,8 +210,20 @@
   @apply mx-auto cursor-pointer hover:opacity-80 transition-all duration-300 ease-in-out;
 }
 
+.modal-gallery {
+  @apply flex justify-center space-x-2 my-4;
+}
+
+.modal-gallery-image {
+  @apply cursor-zoom-in transition-all duration-300 ease-in-out rounded-lg shadow;
+}
+
 .modal-image-description {
   @apply max-w-prose mx-auto text-center text-sea-light;
+}
+
+.modal-image-keyword {
+  @apply font-semibold;
 }
 
 .modal-image-description-link {

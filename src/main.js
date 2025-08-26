@@ -80,4 +80,45 @@ function toggleImage(img) {
   }, 150);
 }
 
+const gallerySize = {
+  full: 'max-w-lg',
+  small: 'max-w-3xs',
+}
+function toggleGalleryImage(img) {
+  const isFull = img.classList.contains(gallerySize.full);
+  const allImages = img.parentElement.querySelectorAll("img");
+
+  if (!isFull) {
+    // zoom in
+    img.classList.add("opacity-0");
+    setTimeout(() => {
+      img.classList.remove(gallerySize.small, "cursor-zoom-in", "opacity-0");
+      img.classList.add(gallerySize.full, "cursor-zoom-out", "opacity-100");
+    }, 150);
+
+    // fade out others
+    allImages.forEach(el => {
+      if (el !== img) {
+        el.classList.add("opacity-0");
+        setTimeout(() => el.classList.add("hidden"), 300);
+      }
+    });
+  } else {
+    // zoom out
+    img.classList.add("opacity-0");
+    setTimeout(() => {
+      img.classList.remove(gallerySize.full, "cursor-zoom-out", "opacity-0");
+      img.classList.add(gallerySize.small, "cursor-zoom-in", "opacity-100");
+    }, 150);
+
+    // show others
+    allImages.forEach(el => {
+      if (el !== img) {
+        el.classList.remove("hidden");
+        setTimeout(() => el.classList.remove("opacity-0"), 10);
+      }
+    });
+  }
+}
+
 fetchContent();
