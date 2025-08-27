@@ -9,7 +9,31 @@
     </div>
     <div class="modal-body">
       <p class="modal-paragraph">
-        Lorem ipsum dolor.
+        How do you prevent cheating in web games where the code is served fully to the client?
+        <br class="leading-none">
+        This was the problem I was faced with when the company I worked for decided to put an end to cheaters once and for all.
+        We'd implemented loads of steps already that made it more difficult to cheat, preventing most people from even trying.
+        But when there are valuable prizes involved the incentive to cheat skyrockets.
+        <br>
+        After researching and workshopping the task at hand we came to the conclusion that the only way to fully prevent it
+        is to verify the game session server-side.
+        It seems simple, and it has been done before, but our problem was larger since we had a <span class="font-semibold italic">library</span> of games
+        with vastly different gameplay - all needing to be supported by one global anticheat system.
+      </p>
+      <p class="modal-paragraph">
+        I developed a system of modules that would validate specific parts of a game session, examples:
+      </p>
+      <ul class="modal-list">
+        <li><span class="modal-list-title">Scores</span>: How many points were received at any given time, the intervals between each score, etc</li>
+        <li><span class="modal-list-title">Interaction</span>: How often is the user interacting, is it on the exact same spot (autoclicking), etc</li>
+        <li><span class="modal-list-title">Dev Tools</span>: Is the user opening up the devtools tab where they can manipulate values?</li>
+      </ul>
+      <p class="modal-paragraph">
+        So the game developers could create an anticheat configuration for each game, enabling us to use one global system but in a modular fashion.
+        <br>
+        This was all written in TypeScript in a way that made extending each module simple, and adding new ones just a matter of creating a new file and extending the base module.
+        The validation system runs on the backend after a game round and needs to be quick enough to not delay the user experience.
+        The runtime system is a repository imported by the framework and extending it.
       </p>
     </div>
   </div>

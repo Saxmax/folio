@@ -14,31 +14,42 @@
         and not have to spend time writing/copying/modifying the same functions over again.
         It has grown to be a huge project that supports multiple game modes on multiple platforms
         for every different type of game conceivable in the Flarie library.
-      </p>
-      <p class="modal-paragraph">
+        <br>
         The Framework also holds the UI that all games display, which consists of:
-        * The scorebar:
+      </p>
+      <ul class="modal-list leading-none">
+        <li>
+          <span class="modal-list-title">Scorebar</span>:
           This holds the current score, any lives, stars, moves remaining, and a colored visual timer.
-        * The coins display:
+        </li>
+        <li>
+          <span class="modal-list-title">Coins display</span>:
           Simply tells the users how many coins they have accrued so far in the game round.
           It may also serve as a filled container for sessions that have a target score to reach.
-        * The pause button & view:
+        </li>
+        <li>
+          <span class="modal-list-title">Pause button & Pause view</span>:
           A simple button that opens up a screen-covering interface while pausing the game.
           The pause view shows the tutorial text and lets the user exit the game or resume.
-        * Preview page:
+        </li>
+        <li>
+          <span class="modal-list-title">Preview page</span>:
           Before the game begins we display the latest score achieved and the PLAY button to begin the game.
-        * And more..
+        </li>
+        <li>
+          <span class="modal-list-title">And more..</span>
           Depending on the game, game mode, and platform, the framework UI would adapt.
-      </p>
-      <img src="images/scorebars.png" class="modal-image max-w-lg" onclick="this.classList.toggle('max-w-lg'); this.classList.toggle('max-w-full');"/>
+        </li>
+      </ul>
+      <br>
+      <img src="images/scorebars.png" class="modal-image-static max-w-full"/>
       <p class="modal-image-description">Different versions of the scorebar</p>
       <p class="modal-paragraph">
         When I first joined Flarie they had about 50 games in their app and I noticed that each game had some identical functions in them.
         I set about creating a new file, the 'Framework', that would hold all of these shared functions.
         At first this was just a global script dumping functions in to the DOM,
         but during a later rewrite it became a class object.
-      </p>
-      <p class="modal-paragraph">
+        <br>
         What began as a bare-bones collection of necessary functions for each game
         eventually grew to alleviate other common trends I noticed in the game code.
         Say some of the games had pickups in them where the developer wanted a particle emitter effect,

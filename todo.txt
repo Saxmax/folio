@@ -1,9 +1,7 @@
-add remaining images
-polish project page texts
-
-projects to write:
-- anticheat
+projects to write & finish:
+- anticheat X
 - dooh X
-- framework
+- framework X
 - multiplayer
 - game engines X
+- portfolio X
