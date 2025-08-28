@@ -1,2 +1,0 @@
-- add häxdans in about-me section
-- add spotify icon, linking to Häxdans page
