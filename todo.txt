@@ -1,7 +1,2 @@
-projects to write & finish:
-- anticheat X
-- dooh X
-- framework X
-- multiplayer
-- game engines X
-- portfolio X
+- add häxdans in about-me section
+- add spotify icon, linking to Häxdans page
